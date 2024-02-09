@@ -1,0 +1,250 @@
+/* ---------------------------------------- */
+/* #region Basic--------------------------- */
+
+#pageLab{
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
+/* Card design Starts here */
+.divLabCard{
+    position: relative;
+    height: 25%;    width: 100%;
+
+    border: 1px solid rgba(200, 200, 255, .2);
+    margin-bottom: 5%;    border-radius: 5vw;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+
+/* #endregion Basic------------------------ */
+/* ---------------------------------------- */
+
+
+
+
+/* --------------------------------------------- */
+/* #region Fold phase--------------------------- */
+
+.divCardFold{
+    width: 100%; height: 100%;
+    z-index: 100 !important;    overflow: hidden;
+    transition: height 0.3s ease;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+/* Gradient style's code */
+.divLblLabCard{
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    overflow: hidden;
+    z-index: 100 !important;
+    
+    display: flex;  /* to show the lblLabCard in bottom right */
+    justify-content: flex-end;
+    align-items: center;
+}
+.lblLabCard{
+    font-size: 3vh;
+    margin-right: 2vw;
+}
+/* Thumbnail Image's code */
+.divImgLabCard{
+    border: none; outline: none;
+    overflow: hidden;
+    z-index: 0 !important;
+
+    grid-column: 1/4;
+    grid-row: 1/-1;
+}
+.imgLabCard{
+    height: 100%;   width: 100%;
+}
+/* #endregion Fold phase------------------------ */
+/* --------------------------------------------- */
+
+
+
+
+/* ----------------------------------------------- */
+/* #region Expand Phase--------------------------- */
+
+
+.divCardExpand{
+    width: 100%;
+    z-index: 0 !important;
+
+    text-align: center;
+    transition: height 0.3s ease;
+
+    display: grid;  overflow: hidden;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+.pExpandCard{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+
+    color: #c8c8c8;
+    margin-top: 1vh !important;
+    overflow: hidden;
+}
+.btnExploreCard{
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+    
+    height: 100%;   width: 100%;
+    border: none;   outline: none;    
+    color: #c8c8c8;
+    background: #9b9b9b06;
+    transition: background 0.1s ease-in;
+}
+.btnExploreCard:active{
+    background: transparent;/*will change to ripple effect*/
+}
+
+/* #endregion Expand Phase------------------------ */
+/* ----------------------------------------------- */
+
+
+
+
+
+/* ----------------------------------------------- */
+/* #region Active Class--------------------------- */
+
+
+.divLabCard.active {
+    height: 40%;
+}
+.divLabCard.active .divCardFold{
+    height: 50%;
+}
+.divLabCard.active .divCardExpand{
+    height: 50%;
+}
+
+/* #endregion Active Class------------------------ */
+/* ----------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------------------- */
+/* #region Change gradient color for each card--------------------------- */
+
+/* Card 1 */
+#pageLab .divLabCard:nth-child(1) .divLblLabCard{
+    background: linear-gradient(to right, transparent, black 70%);
+}
+#pageLab .divLabCard:nth-child(1) .divLblLabCard .lblLabCard{
+    color:rgb(255, 150, 150)
+}
+
+#pageLab .divLabCard:nth-child(1) .divCardExpand{
+    background: black;
+}
+/* Card 2 */
+#pageLab .divLabCard:nth-child(2) .divLblLabCard{
+    background: linear-gradient(to right, transparent, #100E1A 70%);
+}
+#pageLab .divLabCard:nth-child(2) .divLblLabCard .lblLabCard{
+    color:rgb(150, 150, 255)
+}
+
+#pageLab .divLabCard:nth-child(2) .divCardExpand{
+    background: #100E1A;
+}
+/* Card 3 */
+#pageLab .divLabCard:nth-child(3) .divLblLabCard{
+    background: linear-gradient(to right, transparent, #001828 70%);
+}
+#pageLab .divLabCard:nth-child(3) .divLblLabCard .lblLabCard{
+    color:rgb(150, 255, 150)
+}
+
+#pageLab .divLabCard:nth-child(3) .divCardExpand{
+    background: #001828;
+}
+/* Card 4 */
+#pageLab .divLabCard:nth-child(4) .divLblLabCard{
+    background: linear-gradient(to right, transparent, #180A12 70%);
+}
+#pageLab .divLabCard:nth-child(4) .divLblLabCard .lblLabCard{
+    color:rgb(255, 150, 150)
+}
+
+#pageLab .divLabCard:nth-child(4) .divCardExpand{
+    background: #180A12;
+}
+/* Card 5 */
+#pageLab .divLabCard:nth-child(5) .divLblLabCard{
+    background: linear-gradient(to right, transparent, #082117cc 70%);
+}
+#pageLab .divLabCard:nth-child(5) .divLblLabCard .lblLabCard{
+    color:rgb(150, 255, 150)
+}
+
+#pageLab .divLabCard:nth-child(5) .divCardExpand{
+    background: #082117cc;
+}
+/* Card 6 */
+#pageLab .divLabCard:nth-child(6) .divLblLabCard{
+    background: linear-gradient(to right, transparent, #080f21 70%);
+}
+#pageLab .divLabCard:nth-child(6) .divLblLabCard .lblLabCard{
+    color:rgb(255, 150, 150)
+}
+
+#pageLab .divLabCard:nth-child(6) .divCardExpand{
+    background: #080f21;
+}
+/* Card 7 */
+#pageLab .divLabCard:nth-child(7) .divLblLabCard{
+    background: linear-gradient(to right, transparent, black 70%);
+}
+#pageLab .divLabCard:nth-child(7) .divLblLabCard .lblLabCard{
+    color:rgb(150, 150, 255)
+}
+
+#pageLab .divLabCard:nth-child(7) .divCardExpand{
+    background: black;
+}
+/* Card 8 */
+#pageLab .divLabCard:nth-child(8) .divLblLabCard{
+    background: linear-gradient(to right, transparent, black 70%);
+}
+#pageLab .divLabCard:nth-child(8) .divLblLabCard .lblLabCard{
+    color:rgb(150, 255, 150)
+}
+
+#pageLab .divLabCard:nth-child(8) .divCardExpand{
+    background: #000;
+}
+/* Card 9 */
+#pageLab .divLabCard:nth-child(9) .divLblLabCard{
+    background: linear-gradient(to right, black, black 70%);
+}
+#pageLab .divLabCard:nth-child(9) .divLblLabCard .lblLabCard{
+    color:rgb(150, 150, 255)
+}
+
+#pageLab .divLabCard:nth-child(9) .divCardExpand{
+    background: black;
+}
+/* Card 10 */
+#pageLab .divLabCard:nth-child(10) .divLblLabCard{
+    background: linear-gradient(to right, black, black 70%);
+}
+#pageLab .divLabCard:nth-child(10) .divLblLabCard .lblLabCard{
+    color:rgb(150, 150, 255)
+}
+
+#pageLab .divLabCard:nth-child(10) .divCardExpand{
+    background: black;
+}
+
+/* #endregion Change gradient color for each card------------------------ */
+/* ---------------------------------------------------------------------- */

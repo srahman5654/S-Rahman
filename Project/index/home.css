@@ -1,0 +1,52 @@
+#pageHome{
+    overflow: hidden;
+    /* x= hidden y=scroll will nlock it after ssc*/
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+
+/* SSC injector */
+#h-divSscInject{
+    grid-column: 1/-1;  grid-row: 1/-1;
+
+    height: 100%;   width: 100%;
+    z-index: 1000;
+    
+    display: flex;  flex-direction: column; text-align: center;
+    justify-content: flex-end; align-items: center;
+}
+#lblNoscroll{
+    color: crimson;
+    font-size: medium;
+    font-style: italic;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Main Home section */
+/* ----------------- */
+/* ----------------- */
+.h-divPostContainer{
+    grid-column: 1/-1;  grid-row: 1/-1;
+
+    height: 100%;   width: 100%;
+    z-index: 999;
+}
+.h-divPost{
+    position: relative;
+    height: 30%;    width: 100%;
+    background: rgb(5, 11, 25);
+    border: 1px solid rgba(200, 200, 255, .2);
+    margin-bottom: 5%;    
+    padding: 5%;
+    border-radius: 5vw;
+    overflow: hidden;
+}
+.h-imgPost{
+    height: 100%;   width: 100%;
+    border-radius: 5vw;
+    overflow: hidden;
+}

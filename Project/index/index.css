@@ -1,0 +1,188 @@
+/* ------------------------------------------------------- */
+/* #region Container Type Codes___________________________ */
+
+:root{/* Variables */
+    --var: value;
+}
+@font-face {/* Font files */
+    font-family: 'Visbi';
+    src: url(./Asset/VisbyRoundCF-Medium.otf);
+
+}
+*,*::before,*::after{/* Universal Selector */
+    box-sizing: border-box;
+    margin: 0;  padding: 0;
+    font-family: 'Visbi', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent; 
+}
+html{/* HTML's code */
+    height: 100%;   width: 100%;
+}
+body{/* Body's code */
+    max-height: 100vh;   max-width: 100vw;
+    background: #00050f;
+}
+
+/* divContainer -The Container div*/
+#divContainer{
+    position: absolute; top: 0; left: 0;
+    height: 100%;   width: 100%;
+
+    display: grid;
+    grid-template-rows: 17.5vh 1fr;
+    color: #ffffff1a;
+}
+/* #endregion Container Type Codes________________________ */
+/* ------------------------------------------------------- */
+
+
+/* -------------------------------------------- */
+/* #region Preloader--------------------------- */
+
+/* Preloader */
+#divPreloader{
+    position: fixed;    z-index: 1000;    
+    top: 0; left: 0;
+    height: 100vh;    width: 100%;
+    background: radial-gradient(#000000cc 25% , #000000cc 25% ,#00000080 50%);
+    backdrop-filter: blur(1rem);
+
+    display: flex;  justify-content: center; align-items: center;    
+}
+#imgLoader{
+    height: 10vh;
+    border-radius: 50%;
+}
+
+/*  Desk lock injector  */
+#divLandscape{
+    position: fixed;    z-index: 999;  overflow: hidden;  
+    top: 0; left: 0;
+    height: 100vh;    width: 100%;
+    background: radial-gradient(#000000cc 25% , #000000cc 25% ,#00000080 50%);
+    backdrop-filter: blur(100px);
+
+    display: none;  flex-direction: column; gap: 1rem;
+    justify-content: center; align-items: center;
+}
+#imgLandscapePic{
+    border-radius: 50%;
+    border: 1rem solid rgba(255, 255, 255, 0.1) ;
+}
+#lblLandscape{
+    font-size: xx-large;
+    font-weight: 600;
+    color: crimson;
+}
+
+@media (orientation: landscape){
+    #divLandscape{display: flex;}
+}
+/* #endregion Preloader------------------------ */
+/* -------------------------------------------- */
+
+
+/* ------------------------------------------------ */
+/* #region Top Bar Codes--------------------------- */
+
+
+#divTopBar{
+    grid-row: 1/2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+/* Title Bar */
+#divTitleBar{
+    grid-row: 1/2;  overflow: hidden;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+#divSrahman{
+    grid-column: 1/2;  overflow: hidden;
+    padding: 1.25vh;
+
+    display: flex;  flex-direction: row;
+    justify-content: start;  align-items: center;
+    gap: 1vw;
+}
+#imgLogo{
+    height: 100%;
+    border-radius: 50%;
+}
+#lblSrahman{
+    color: rgb(2, 155, 103);
+    font-size: 2.75vh;
+    line-height: 0.75;
+    font-weight: 500;
+}
+#spnSubtitle{
+    color: #222;
+    font-size: 2vh;
+    font-weight: normal;
+}
+/* Name of Page */
+#divNameOfPage{
+    grid-column: 2/-1;  overflow: hidden;
+    height: 100%;   width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#lblNameOfPage{
+    color: #fff;
+}
+/* Nav Bar */
+#divNavBar{
+    grid-row: 2/-1;
+    padding: 0 10vw;
+    display: flex;    align-items: center;    justify-content: space-between;
+}
+.imgNavMenuAll{
+    height: 50%;
+    transition: all 0.1s;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.imgNavMenuAll.checked{
+    background: linear-gradient(red,blue);
+    box-shadow: inset 1px 2px 4px 0 rgba(255, 255, 255,.35), 
+                inset 5px 10px 15px 0 rgba(128, 128, 128,.5),
+                     0px 0px 3px 2px rgb(28, 28, 28);
+    height: 60%;
+    padding: .75vh;
+}
+
+}
+/* #endregion Top Bar Codes------------------------ */
+/* ------------------------------------------------ */
+
+
+/* ------------------------------------------------- */
+/* #region Page Container--------------------------- */
+
+
+#divPageContainer{
+    position: relative;    overflow: hidden;
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw;
+
+    display: flex;  flex-direction: row;
+}
+.pageAll{
+    position: absolute;    
+    height: 82.5vh;   width: 100%;
+    background-color: #000611;
+}
+/* #endregion Page Container------------------------ */
+/* ------------------------------------------------- */
+
+
+
+
+
+
+
+
