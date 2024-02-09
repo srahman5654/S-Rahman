@@ -11,8 +11,11 @@ window.onload =()=>{
 // ------------------------------------------->
 
 // ------------------------------------------>
-// #region Nav Bar--------------------------->
+// #region Top Bar--------------------------->
 
+// Title bar
+let lblNameOfPage = document.getElementById("lblNameOfPage");
+// Nav menu
 let imgNavMenuAll = document.querySelectorAll('.imgNavMenuAll')
 let nmHome = document.getElementById('nmHome')
 let nmLab = document.getElementById('nmLab')
@@ -20,6 +23,7 @@ let nmFav = document.getElementById('nmFav')
 let nmPlan = document.getElementById('nmPlan')
 let nmMenu = document.getElementById('nmMenu')
 
+// Pages
 let pageAll = document.querySelectorAll('pageAll')
 let pageHome = document.getElementById('pageHome')
 let pageLab = document.getElementById('pageLab')
@@ -35,6 +39,7 @@ function Home() {
     pageFav.style.zIndex = '0'
     pagePlan.style.zIndex = '0'
     pageMenu.style.zIndex = '0'
+    lblNameOfPage.innerText = 'Home'
 
     imgNavMenuAll.forEach(imgNavMenuAll => {
         imgNavMenuAll.classList.remove('checked')
@@ -47,6 +52,7 @@ function Lab() {
     pageFav.style.zIndex = '0'
     pagePlan.style.zIndex = '0'
     pageMenu.style.zIndex = '0'
+    lblNameOfPage.innerText = 'Lab'
 
     imgNavMenuAll.forEach(imgNavMenuAll => {
         imgNavMenuAll.classList.remove('checked')
@@ -59,6 +65,7 @@ function Fav() {
     pageFav.style.zIndex = '1'
     pagePlan.style.zIndex = '0'
     pageMenu.style.zIndex = '0'
+    lblNameOfPage.innerText = 'Fav'
     
     imgNavMenuAll.forEach(imgNavMenuAll => {
         imgNavMenuAll.classList.remove('checked')
@@ -71,6 +78,7 @@ function Plan() {
     pageFav.style.zIndex = '0'
     pagePlan.style.zIndex = '1'
     pageMenu.style.zIndex = '0'
+    lblNameOfPage.innerText = 'Plan'
 
     imgNavMenuAll.forEach(imgNavMenuAll => {
         imgNavMenuAll.classList.remove('checked')
@@ -83,6 +91,7 @@ function Menu() {
     pageFav.style.zIndex = '0'
     pagePlan.style.zIndex = '0'
     pageMenu.style.zIndex = '1'
+    lblNameOfPage.innerText = 'Menu'
 
     imgNavMenuAll.forEach(imgNavMenuAll => {
         imgNavMenuAll.classList.remove('checked')
@@ -108,7 +117,7 @@ nmMenu.onclick = () => {
 
 
 
-// #endregion Nav Bar------------------------>
+// #endregion Top Bar------------------------>
 // ------------------------------------------>
 
 
